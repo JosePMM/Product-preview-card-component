@@ -1,0 +1,120 @@
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    --family-montserrat: "Montserrat", sans-serif;
+    --family-fraunces: "Fraunces", serif;
+    --font-size-p: 14px
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Cream);
+    font-family: var(--family-montserrat);
+    font-size: var(--font-size-p);
+}
+
+.card {
+    background-color: var(--White);
+    width: 344px;
+    height: 612px;
+    margin: 68px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__imagen--img {
+    width: 100%;
+}
+
+.card__descripcion {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card__descripcion--tipo {
+    color: var(--Dark-grayish-blue);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.7em;
+}
+
+.card__descripcion--titulo {
+    font-family: var(--family-fraunces);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.card__descripcion--text {
+    font-size: 1em;
+    line-height: 1.7;
+}
+
+.card__descripcion__precios {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card__descripcion__precios--principal {
+    font-size: 2em;
+    font-family: var(--family-fraunces);
+    color: var(--Dark-cyan);
+}
+
+.card__descripcion__precios--secundario {
+    font-size: 0.8em;
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+}
+
+.card__descripcion--boton {
+    width: 100%;
+    padding: 1rem;
+    font-weight: 700;
+    color: var(--White);
+    background-color: var(--Dark-cyan);
+    border: none;
+    border-radius: 10px;
+}
+
+.card__descripcion--boton:hover {
+    background-color: var(--Very-dark-blue);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 700px) {
+    .card {
+        flex-direction: row;
+        width: 612px;
+        height: 450px;
+        margin: 120px auto;
+    }
+
+    .card__imagen {
+        width: 50%;
+    }
+
+    .card__imagen--img {
+        content: url(../images/image-product-desktop.jpg);
+        height: 100%;
+    }
+
+    .card__descripcion {
+        width: 50%;
+        padding: 35px;
+        gap: 25px;
+    }
+}
